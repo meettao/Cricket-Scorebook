@@ -43,7 +43,7 @@ class PlayFragment : Fragment() {
         binding.btnStartMatch.setOnClickListener {
             if (binding.etTeamA.text.isNullOrEmpty() || binding.etTeamB.text.isNullOrEmpty()) {
                 Toast.makeText(context, "Please Enter Team Name", Toast.LENGTH_SHORT).show()
-            } else if (binding.etOver.text.isNullOrEmpty() ) {
+            } else if (binding.etOver.text.isNullOrEmpty() || binding.etOver.text.toString() == "0") {
                 Toast.makeText(context, "Please Enter Overs", Toast.LENGTH_SHORT).show()
             } else if (binding.etTeamA.text.toString() == binding.etTeamB.text.toString()) {
                 Toast.makeText(context, "Please enter different name of teams", Toast.LENGTH_SHORT).show()
